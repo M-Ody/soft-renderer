@@ -1,22 +1,25 @@
 #include "Std.h"
 
-/*String 
+String 
 NewString(int length)
 {
 	//TODO implement
-	
+	String str = {};
+	return str;
 }
 
 String 
 NewString(char* text)
 {
 	//TODO implement
-}*/
+	String str = {};
+	return str;
+}
 
 void 
 CleanStringBuffer(char* buffer, int length)
 {
-	//Change this to "ChangeString", accepting a string
+	//TODO Change this to "ChangeString", accepting a string
     for (int i = 0; i < length; i++)
     {
         buffer[i] = '\0';

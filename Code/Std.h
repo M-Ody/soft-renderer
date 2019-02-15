@@ -7,8 +7,8 @@ typedef struct String
 	char* text;
 } String;
 
-//String NewString(int length);
-//String NewString(char* text);
+String NewString(int length);
+String NewString(char* text);
 void CleanStringBuffer(char* buffer, int length);
 void SubString(char* destination, char* source, int start, int end);
 
