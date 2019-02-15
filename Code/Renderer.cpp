@@ -1,22 +1,11 @@
 #include "Renderer.h"
-#include "Model.h"
 
+/////////////////
+//This should not be needed later on
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-#define PI 3.14159265359
-#define FORWARD_ROT 1.5708
-
-//
-//TODO Math stuff, get this out of here
-//
-#define SwapInt(x,y) do { int temp = x; x = y; y = temp; } while(0)
-
-struct Vector2
-{
-    float x, y;
-};
+/////////////////
 
 void
 CleanBuffer(OffscreenBuffer* buffer)
@@ -97,36 +86,6 @@ DrawLine(OffscreenBuffer* buffer, int x0, int y0, int x1, int y1, int rgb)
             correction -= xLineSpan*2;
         }
     }
-}
-
-void line(OffscreenBuffer *buffer, int x0, int y0, int x1, int y1, int color) { 
-    bool steep = false; 
-    if (abs(x0-x1)<abs(y0-y1)) { 
-        SwapInt(x0, y0); 
-        SwapInt(x1, y1); 
-        steep = true; 
-    } 
-    if (x0>x1) { 
-        SwapInt(x0, x1); 
-        SwapInt(y0, y1); 
-    } 
-    int dx = x1-x0; 
-    int dy = y1-y0; 
-    int derror2 = abs(dy)*2; 
-    int error2 = 0; 
-    int y = y0; 
-    for (int x=x0; x<=x1; x++) { 
-        if (steep) { 
-            PutPixel(buffer, y, x, color); 
-        } else { 
-            PutPixel(buffer, x, y, color); 
-        } 
-        error2 += derror2; 
-        if (error2 > dx) { 
-            y += (y1>y0?1:-1); 
-            error2 -= dx*2; 
-        } 
-    } 
 }
 
 //TODO Don't leave this here

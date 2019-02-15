@@ -1,4 +1,7 @@
 #ifndef RENDERER_H
+#define RENDERER_H
+
+#include "Model.h"
 
 struct OffscreenBuffer
 {
@@ -16,6 +19,5 @@ void ProfileStart();
 void ProfileEnd();
 char* OpenFile(char* path);
 
-#define RENDERER_H
 #endif
 

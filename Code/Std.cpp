@@ -1,16 +1,17 @@
 #include "Std.h"
 
-String 
+/*String 
 NewString(int length)
 {
 	//TODO implement
+	
 }
 
 String 
 NewString(char* text)
 {
 	//TODO implement
-}
+}*/
 
 void 
 CleanStringBuffer(char* buffer, int length)
