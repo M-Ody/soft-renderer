@@ -1,7 +1,6 @@
 #include <stdlib.h>
 
 #include "Model.h"
-#include "Renderer.h"
 
 Face CreateFace(int a, int b, int c)
 {
@@ -60,7 +59,7 @@ Model* LoadModel(char* file)
             for (int vectorArrayIndex = 0; vectorArrayIndex < 3; vectorArrayIndex++)
             {   //Iterate through the three float values
                 
-                CleanStringBuffer(parseBuffer, 64);
+                CleanStringBuffer(parseBuffer, 32);
                 
                 fileIndex = fileIndex+2; //Jump last char and white space
                 int start = fileIndex;
