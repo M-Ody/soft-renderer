@@ -2,7 +2,8 @@
 
 #include "Model.h"
 
-Face CreateFace(int a, int b, int c)
+Face 
+CreateFace(int a, int b, int c)
 {
     Face face = {};
     face.data[0] = a;
@@ -11,7 +12,8 @@ Face CreateFace(int a, int b, int c)
     return face;
 }
 
-Model* LoadModel(char* file)
+Model* 
+LoadModel(char* file)
 {
     char* content = OpenFile(file);
     

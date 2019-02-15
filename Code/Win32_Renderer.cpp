@@ -80,7 +80,8 @@ ProfileEnd()
 }
 
 #define MAX_FILE_SIZE 5242880 // 5Mb
-char* OpenFile(char* filePath)
+char* 
+OpenFile(char* filePath)
 {
     
     if (exePath[0] == NULL)
